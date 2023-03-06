@@ -7,11 +7,11 @@ function Func(){
     const[sec,setSeconds]=useState(0);
     useEffect(()=>{
         setTimeout(()=>{setInc(a+1);},1000);
-        //setTimeout(() => alert('Initial timeout!'),);
+        setTimeout(() => alert('Initial timeout!'),);
 
-        //const interval = setInterval(() => {
-          //  setSeconds(seconds => seconds + 1);}, 1000);
-          //return () => clearInterval(interval);
+        const interval = setInterval(() => {
+        setSeconds(seconds => seconds + 1);}, 10);
+          return () => clearInterval(interval);
         },[])
     return(
         <div>
